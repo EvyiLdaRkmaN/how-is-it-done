@@ -56,6 +56,9 @@ La configuración descrita a partir de este punto, es para no tener que compilar
 Para la configuración de alias, se requiere tener instalado [tsconfig-paths](4) por lo que ahora si podríamos usar la siguiente configuración en nuestro **tsconfig.json**, quedando de la siguiente manera.
 
 ```json
+"ts-node":{
+    "require": ["tsconfig-paths/register"]
+},
 "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -64,6 +67,8 @@ Para la configuración de alias, se requiere tener instalado [tsconfig-paths](4)
     }
 }
 ```
+
+**IMPORTANTE:** una ves instalado el paquete, debe estar especificado `"require": ["tsconfig-paths/register"]` en `ts-node` el paquete, como se ve en el ejemplo anterior.
 
 
 
