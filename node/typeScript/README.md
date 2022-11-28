@@ -51,7 +51,19 @@ La configuración descrita a partir de este punto, es para no tener que compilar
           "start": "set NODE_ENV=production && node build/app.js"
         }
         ```
-    5. 
+
+## Configuración de alias
+Para la configuración de alias, se requiere tener instalado [tsconfig-paths](4) por lo que ahora si podríamos usar la siguiente configuración en nuestro **tsconfig.json**, quedando de la siguiente manera.
+
+```json
+"compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@config/*": ["./src/config/*"],
+      "@routes/*": ["./src/routes/*"]
+    }
+}
+```
 
 
 
@@ -61,3 +73,4 @@ La configuración descrita a partir de este punto, es para no tener que compilar
 [1]: https://github.com/tsconfig/bases/
 [2]: https://typestrong.org/ts-node/docs/installation
 [3]: https://github.com/remy/nodemon
+[4]: https://github.com/dividab/tsconfig-paths#readme
